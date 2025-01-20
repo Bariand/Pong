@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     private int player1Score;
     private int player2Score;
+    private Vector3 ballStartingPosition;
     [SerializeField] public GameObject ball;
     [SerializeField] public GameObject leftPaddle;
     [SerializeField] public GameObject rightPaddle;
@@ -18,6 +19,7 @@ public class GameController : MonoBehaviour
     {
         player1Score = 0;
         player2Score = 0;
+        ballStartingPosition = ball.GetComponent<Transform>().position;
     }
 
     public void Player1Scored()
@@ -30,5 +32,10 @@ public class GameController : MonoBehaviour
     {
         player2Score++;
         player2ScoreBoard.GetComponent<TextMeshProUGUI>().text = player2Score.ToString();
+    }
+
+    public void ResetGame() 
+    {
+        ball.GetComponent<Transform>().position = ballStartingPosition;
     }
 }

@@ -15,7 +15,7 @@ public class BallController : MonoBehaviour
         
     }
 
-    private void LaunchBall()
+    public void LaunchBall()
     {
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
