@@ -7,7 +7,7 @@ public class BallController : MonoBehaviour
 
     void Start()
     {
-        Invoke("LaunchBall", 3f);
+        Invoke("LaunchBall", 3);
     }
 
     void Update()
